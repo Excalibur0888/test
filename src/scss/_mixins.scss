@@ -1,0 +1,26 @@
+@mixin fonty ($size: 22px, $weight: 400, $lineH: 30px) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineH;
+}
+
+@mixin flexy($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin centry($width) {
+    margin: 0 auto;
+    width: $width;
+}
+
+// внутренний отступ, например: @include p(top, 20) выведет в стилях 'padding-top: 20px';
+@mixin p($side, $px) {
+    padding-#{$side}: #{$px}px;
+}
+
+@mixin m($side, $px) {
+    margin-#{$side}: #{$px}px;
+}
